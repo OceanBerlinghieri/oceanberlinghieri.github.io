@@ -1,18 +1,42 @@
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h2 {
+    text-align: center;
+}
+
 body {
-    background-color: darkgray;
+    font-family: 'Courier New', Courier, monospace;
+    /*background-color: #1D1D20;*/
+    background-image: url(../images/background.jpg) ;
+    background-repeat: no-repeat;
+    background-size: 100% 25%;
+}
+ .myImage {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+ }
+
+.about {
+    margin-top: 10px;
+    display: flex;
+
 }
 
 .presentation {
-    display: flex;
-    flex-direction: row;
+    flex: 1 1 0;
+    border: solid black;
+    padding-left: 20px;
 }
 
 .skills {
-    border: 2px solid black;
-    margin-bottom: 5%;
-    padding: 3%;
+    flex: 1 1 0;
+    border: solid black;
 }
 
-img {
-    border-radius: 50%;
+.contact {
+    text-align: center;
 }
