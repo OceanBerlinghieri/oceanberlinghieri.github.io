@@ -93,8 +93,37 @@ h2 {
 
 .presentation p {
     text-align: center;
+    margin: 0 10%;
+    padding-top: 2%;
 }
 
+.skills {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: aliceblue;
+}
 .skills h2 {
     display: block;
+}
+
+.projects {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: whitesmoke;
+}
+
+.contact {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    color: whitesmoke;
+    background-color: #2b2b2b;
+}
+
+.rrss {
+    text-align: center;
+}
+.contact img {
+    padding: 0 2%;
+    display: inline-block;
+    margin: 0 auto;
 }
