@@ -1,29 +1,92 @@
-h1 {
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2b2b2b;
+    padding-top: 5px;
+    padding-left: 10px;
+    justify-content: space-between;
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: right;
+    margin-right: 5%;
+}
+
+li a {
+    display: block;
+    color: #0097b2;
     text-align: center;
-    margin-top: 50px;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+nav {
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 110%;
+}
+
+h1 {
+    font-size: 350%;
+    text-align: center;
 }
 
 h2 {
     text-align: center;
 }
+#name {
+    color: #0097b2;
+    text-align: center;
+}
+.name{
+    display: inline;
+    color: whitesmoke;
+    margin: 0;
+    text-align: center;
+}
+
+.enthusiast {
+    color: white;
+    margin: 0;
+    font-size: 150%;
+}
+
+.frontPage {
+    text-align: center;
+    margin-top: 20%;
+    margin-bottom: 25%;
+}
 
 body {
+    margin: 0 12%;
+    padding: 0;
     font-family: 'Courier New', Courier, monospace;
     /*background-color: #1D1D20;*/
-    background-image: url(../images/background.jpg) ;
+    background-image: url(../images/space-background.jpg) ;
     background-repeat: no-repeat;
-    background-size: 100% 25%;
+    background-size: 100% 40%;
 }
+
+
  .myImage {
     display: block;
     margin: 0 auto;
     border-radius: 50%;
  }
 
-.about {
-    margin-top: 10px;
-    display: flex;
 
+.about {
+    display: flex;
+    margin-top: 5%;
 }
 
 .presentation {
@@ -37,6 +100,6 @@ body {
     border: solid black;
 }
 
-.contact {
+#contact {
     text-align: center;
 }
