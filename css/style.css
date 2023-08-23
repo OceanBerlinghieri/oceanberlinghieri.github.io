@@ -4,35 +4,47 @@ header{
     left: 0;
     width: 100%;
     background-color: #2b2b2b;
-    padding-top: 5px;
-    padding-left: 10px;
-    justify-content: space-between;
-
 }
 
-ul {
-    list-style-type: none;
+body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    font-family: 'Courier New', Courier, monospace;
+    /*background-color: #1D1D20;*/
+    background-image: url(../images/space-background.jpg) ;
+    background-repeat: no-repeat;
+    background-size: 100% 60%;
 }
 
-li {
-    float: right;
-    margin-right: 5%;
+.navigation-bar img {
+    float: left;
+    margin-left: 0.5%;
+    margin: 0.5% 0.5%;
+}
+
+.navigation-bar ul {
+    padding-top: 1%;
+    margin: 0;
+    float: right;  
+    width: 40%;
+    text-align: center;
+}
+
+ul li {
+    padding: 0 4%;
+    display: inline-block;
+    font-size: 80%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
 }
 
 li a {
-    display: block;
-    color: #0097b2;
-    text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
+    color: #0097b2;
 }
-nav {
-    font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 110%;
+
+a:hover {
+    color: black
 }
 
 h1 {
@@ -47,15 +59,15 @@ h2 {
     color: #0097b2;
     text-align: center;
 }
-.name{
+.title{
     display: inline;
     color: whitesmoke;
     margin: 0;
     text-align: center;
 }
 
-.enthusiast {
-    color: white;
+.subTitle {
+    color: whitesmoke;
     margin: 0;
     font-size: 150%;
 }
@@ -63,43 +75,26 @@ h2 {
 .frontPage {
     text-align: center;
     margin-top: 20%;
-    margin-bottom: 25%;
+    margin-bottom:20%;
 }
 
-body {
-    margin: 0 12%;
-    padding: 0;
-    font-family: 'Courier New', Courier, monospace;
-    /*background-color: #1D1D20;*/
-    background-image: url(../images/space-background.jpg) ;
-    background-repeat: no-repeat;
-    background-size: 100% 40%;
-}
-
-
- .myImage {
+.myImage {
     display: block;
     margin: 0 auto;
     border-radius: 50%;
- }
-
+}
 
 .about {
-    display: flex;
-    margin-top: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: whitesmoke;
 }
+ 
 
-.presentation {
-    flex: 1 1 0;
-    border: solid black;
-    padding-left: 20px;
-}
-
-.skills {
-    flex: 1 1 0;
-    border: solid black;
-}
-
-#contact {
+.presentation p {
     text-align: center;
+}
+
+.skills h2 {
+    display: block;
 }
