@@ -93,27 +93,39 @@ h2 {
 
 .presentation p {
     text-align: center;
-    margin: 0 10%;
+    margin: 0 30%;
     padding-top: 2%;
 }
 
-.skills {
-    padding-top: 5%;
+.techs {
+    padding-top: 2%;
     padding-bottom: 5%;
     background-color: aliceblue;
+    text-align: center;
 }
-.skills h2 {
+.techs h2 {
     display: block;
 }
 
+.techs img {
+    width: 10%;
+}
 .projects {
-    padding-top: 5%;
+    padding-top: 2%;
     padding-bottom: 5%;
     background-color: whitesmoke;
+    text-align: center;
+}
+
+.projects img {
+    width: 20%;
+    margin: 0 2%;
+    object-fit: cover;
+    object-position: bottom;
 }
 
 .contact {
-    padding-top: 5%;
+    padding-top: 2%;
     padding-bottom: 5%;
     color: whitesmoke;
     background-color: #2b2b2b;
@@ -126,4 +138,24 @@ h2 {
     padding: 0 2%;
     display: inline-block;
     margin: 0 auto;
+}
+
+.email {
+    text-align: center;
+    height: 50%;
+}
+
+button {
+    background-color: transparent;
+    color: #0097b2;
+    width: 7%;
+    height: 60px;
+    margin-bottom: 2%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 100%;
+}
+
+button:hover{
+    background-color: black;
 }
