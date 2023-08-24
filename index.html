@@ -18,11 +18,12 @@
         <header>
             <div class = "navigation-bar">
                 <a href="index.html">
-                    <img src="./images/logo.png" alt="Logo" width="2%" height="2%">
+                    <img src="./images/logo.png" alt="Logo">
                 </a>
 
                 <ul>
-                    <li><a href = "#about">About me</a></li>
+                    <li><a href ="#about">About me</a></li>
+                    <li><a href ="#techs">Technologies</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>    
                 </ul>
@@ -31,7 +32,7 @@
         </header>
 
         <div class = "frontPage">
-            <h1 class = "title">Hi, I'm </h1> <h1 id ="name" class="title">Ocean Berlinghieri</h1>
+            <h1 class = "title">Hi, I'm <span id ="name" class="title">Ocean Berlinghieri</span></h1>
             <h2 class = "subTitle">IA, OS and science enthusiast</h2>
         </div>
 
@@ -49,7 +50,7 @@
         </div>
             
         <div class =  "techs">
-            <h2>Technologies</h2>
+            <h2 id = "techs">Technologies</h2>
                 <img src="./images/python.png" alt="python">
                 <img src="./images/flask.png" alt="flask">
                 <img src="./images/c.png" alt="c">
@@ -63,8 +64,21 @@
 
         <div class = "projects">
             <h2 id = "projects">My projects</h2>
-            <img src="./images/portfolio.png" alt="My porfolio">
-            <img src="./images/fedora.jpg" alt="fedora">
+                <p>This portfolio is a project itself! 
+                    <br>
+                    You should <span></span>keep coming to see it, it won't stay like this 
+                    for too long
+                </p>
+                <img src="./images/portfolio.png" alt="My porfolio">
+                
+                <p>A full nginx web server conected to a SQL database with HTTPS to access the web site
+                    <br>
+                   Everything works in docker containers and the OS
+                   is linux Fedora running in a virtual machine.
+                    <br> <br>
+                   Click on the image to get the virtual machine!
+                </p>
+                <img src="./images/fedora.jpg" alt="fedora">
         </div> 
 
         <div class = "contact">
@@ -72,15 +86,15 @@
             <div class="email">
             <a href="mailto:berlinghieri10@gmail.com"><button>Email me!</button></a>
             </div>
-            <div class = "rrss">
-            <a href="mailto:berlinghieri10@gmail.com" target="_blank"><img src="./images/mail.png" alt="Gmail" width="2%" height="2%"></a>
-            <a href="https://www.linkedin.com/in/oceanberlinghieri/" target="_blank"><img src="./images/linekdin.png" alt = "LinkedIn" width="2%" height="2%"></a>
-            <a href="https://github.com/OceanBerlinghieri/" target="_blank"><img src="./images/github.png" alt="Github" width="2%" height="2%"></a>
-            </div>
-
         </div>
     </body>
 
     <!--A footer should contain contact information, sitemap, authorship information, back to top links, etc.-->
-    <footer></footer>
+    <footer>
+       <div class = "rrss">
+            <a href="mailto:berlinghieri10@gmail.com" target="_blank"><img src="./images/mail.png" alt="Gmail" width="2%" height="2%"></a>
+            <a href="https://www.linkedin.com/in/oceanberlinghieri/" target="_blank"><img src="./images/linekdin.png" alt = "LinkedIn" width="2%" height="2%"></a>
+            <a href="https://github.com/OceanBerlinghieri/" target="_blank"><img src="./images/github.png" alt="Github" width="2%" height="2%"></a>
+        </div>
+    </footer>
 </html>

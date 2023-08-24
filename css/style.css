@@ -20,18 +20,21 @@ body {
     float: left;
     margin-left: 0.5%;
     margin: 0.5% 0.5%;
+    width: 3.5%;
 }
 
 .navigation-bar ul {
-    padding-top: 1%;
+    padding: 1%;
     margin: 0;
     float: right;  
-    width: 40%;
+    width: 50%;
     text-align: center;
 }
 
 ul li {
-    padding: 0 4%;
+    border:solid #0097b2 1px;
+    padding: 1%;
+    margin: 0 1%;
     display: inline-block;
     font-size: 80%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -93,7 +96,7 @@ h2 {
 
 .presentation p {
     text-align: center;
-    margin: 0 30%;
+    margin: 0 12%;
     padding-top: 2%;
 }
 
@@ -108,20 +111,31 @@ h2 {
 }
 
 .techs img {
-    width: 10%;
+    width: 15%;
+    margin: 2%;
 }
 .projects {
     padding-top: 2%;
     padding-bottom: 5%;
     background-color: whitesmoke;
     text-align: center;
+    
 }
 
 .projects img {
+    display: block;
     width: 20%;
-    margin: 0 2%;
-    object-fit: cover;
-    object-position: bottom;
+    margin: 2% auto;
+    margin-bottom: 5%;
+}
+
+.projects p {
+    margin: 0 12%;
+
+}
+.projects p span{
+    color: #0097b2;
+
 }
 
 .contact {
@@ -131,9 +145,6 @@ h2 {
     background-color: #2b2b2b;
 }
 
-.rrss {
-    text-align: center;
-}
 .contact img {
     padding: 0 2%;
     display: inline-block;
@@ -142,15 +153,14 @@ h2 {
 
 .email {
     text-align: center;
-    height: 50%;
 }
 
 button {
+    text-align: center;
     background-color: transparent;
     color: #0097b2;
-    width: 7%;
-    height: 60px;
-    margin-bottom: 2%;
+    width: 15%;
+    padding: 2%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     font-size: 100%;
@@ -158,4 +168,17 @@ button {
 
 button:hover{
     background-color: black;
+}
+
+footer {
+    background-color: #2b2b2b;
+}
+
+.rrss {
+    text-align: center;
+}
+
+.rrss img {
+    width: 3%;
+    margin: 0.5% 5%;
 }
