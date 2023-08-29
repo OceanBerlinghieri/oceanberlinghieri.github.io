@@ -6,6 +6,7 @@ header{
     background-color: #2b2b2b;
 }
 
+/*Deflault configuration for content*/
 body {
     margin: 0;
     padding: 0;
@@ -15,21 +16,41 @@ body {
     background-repeat: no-repeat;
     background-size: 100% 60%;
 }
+
  /*PC navigation bar*/
-.navigation-bar img {
+.navigation-bar img { /*Logo*/
     float: left;
     margin: 0.5% 0 0.5% 1%;
     width: 40px;
 }
 
-.navigation-bar ul{
+.navigation-bar ul{ /*List of links inside the page*/
     text-align: right;
     padding-top: 7px;
     margin: 0;
     width: 90%;
 }
 
-/*Mobile navigation bar*/
+
+ul li {
+    padding: 1%;
+    margin: 0 1%;
+    display: inline-block;
+    font-size: 80%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+li a {
+    text-decoration: none;
+    color: #0097b2;
+}
+
+a:hover {
+    color: black
+}
+
+/*Mobile navigation bar, need to fix yet*/
 .navbar-mobile {
     display: block;
     padding-top: 8px;
@@ -55,11 +76,13 @@ body {
     width: 25%;
     box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
 }
-
+ 
+/*Action on hover menu button*/
 .navigation-bar-min-width:hover .navbar-mobile-content {
     display: block;
 }
 
+/*Display of the content inside the button*/
 .navbar-mobile-content a {
     display: block;
     text-decoration: none;
@@ -72,36 +95,21 @@ body {
     background-color: #2b2b2b;
     color: #0097b2;
 }
+
+/*If screen is smaller than 650, don't show pc navbar*/
 @media screen and (max-width: 650px) {
     .navbar-pc {
         display: none;
     }
 }
 
+/*If screen is bigger than 650, don't show mobile navbar*/
 @media screen and (min-width: 650px) {
     .navigation-bar-min-width {
         display: none;
     }
 }
 
-
-ul li {
-    padding: 1%;
-    margin: 0 1%;
-    display: inline-block;
-    font-size: 80%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-}
-
-li a {
-    text-decoration: none;
-    color: #0097b2;
-}
-
-a:hover {
-    color: black
-}
 
 h1 {
     font-size: 280%;
@@ -111,10 +119,13 @@ h1 {
 h2 {
     text-align: center;
 }
+
+/*Give style to main title*/
 #name {
     color: #0097b2;
     text-align: center;
 }
+
 .title{
     display: inline;
     color: whitesmoke;
@@ -134,12 +145,14 @@ h2 {
     margin-bottom:20%;
 }
 
+/*Selfie*/
 .myImage {
     display: block;
     margin: 0 auto;
     border-radius: 50%;
 }
 
+/*About section*/
 .about {
     padding-top: 5%;
     padding-bottom: 5%;
@@ -155,6 +168,7 @@ h2 {
     margin-bottom: 2%;
 }
 
+/*Tech section*/
 .techs {
     padding-top: 2%;
     padding-bottom: 5%;
@@ -169,6 +183,8 @@ h2 {
     width: 15%;
     margin: 2%;
 }
+
+/*Project section*/
 .projects {
     padding-top: 2%;
     padding-bottom: 5%;
@@ -193,6 +209,7 @@ h2 {
 
 }
 
+/*Contact section*/
 .contact {
     padding-top: 2%;
     padding-bottom: 5%;
@@ -210,6 +227,7 @@ h2 {
     text-align: center;
 }
 
+/*Style of buttons for get resume and email*/
 .resume-button, .email-button {
     text-align: center;
     background-color: transparent;
@@ -225,6 +243,7 @@ h2 {
     background-color: black;
 }
 
+/*Footer style*/
 footer {
     background-color: #2b2b2b;
 }
