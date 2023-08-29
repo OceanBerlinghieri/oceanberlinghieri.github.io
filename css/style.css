@@ -15,20 +15,75 @@ body {
     background-repeat: no-repeat;
     background-size: 100% 60%;
 }
-
+ /*PC navigation bar*/
 .navigation-bar img {
     float: left;
     margin: 0.5% 0 0.5% 1%;
     width: 40px;
 }
 
-.navigation-bar ul {
-    padding-top: 6px;
-    margin: 0;
-    float: right;  
-    width: 78%;
+.navigation-bar ul{
     text-align: right;
+    padding-top: 7px;
+    margin: 0;
+    width: 90%;
 }
+
+/*Mobile navigation bar*/
+.navbar-mobile {
+    display: block;
+    padding-top: 8px;
+    text-align: center;
+    margin-left: 70%
+}
+
+.navbar-mobile img {
+    width: 15px;
+    margin: 0 auto;
+}
+
+.navigation-bar-min-width button{
+    display: inline;
+    position: absolute;
+    background-color: #2b2b2b;
+    height: 30px;
+}
+
+.navbar-mobile-content {
+    display: none;
+    position: absolute;
+    width: 25%;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+}
+
+.navigation-bar-min-width:hover .navbar-mobile-content {
+    display: block;
+}
+
+.navbar-mobile-content a {
+    display: block;
+    text-decoration: none;
+    background-color: #0097b2;
+    color: #2b2b2b;
+    font-weight: bold;
+}
+
+.navbar-mobile-content a:hover {
+    background-color: #2b2b2b;
+    color: #0097b2;
+}
+@media screen and (max-width: 650px) {
+    .navbar-pc {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .navigation-bar-min-width {
+        display: none;
+    }
+}
+
 
 ul li {
     padding: 1%;
@@ -155,7 +210,7 @@ h2 {
     text-align: center;
 }
 
-button {
+.resume-button, .email-button {
     text-align: center;
     background-color: transparent;
     color: #0097b2;
@@ -166,7 +221,7 @@ button {
     font-size: 100%;
 }
 
-button:hover{
+.resume-button:hover, .email-button:hover{
     background-color: black;
 }
 
