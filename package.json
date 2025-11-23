@@ -1,0 +1,27 @@
+{
+  "name": "oberlinghieri.github.io",
+  "version": "0.0.0-dev",
+  "description": "This project implements a static blog hosted on GitHub Pages, using Jekyll as the site generator, integrated with Netlify CMS to edit and publish content from a graphical interface, and with security configurations for access control.",
+  "scripts": {
+    "lint:html": "htmlhint '**/*.html'",
+    "lint:css": "stylelint '**/*.css'",
+    "lint": "npm run lint:html && npm run lint:css",
+    "format": "prettier --write '**/*.{js,css,html,md}'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OceanBerlinghieri/oberlinghieri.github.io.git"
+  },
+  "keywords": [],
+  "author": "Ocean Berlinghieri García",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OceanBerlinghieri/oberlinghieri.github.io/issues"
+  },
+  "homepage": "https://github.com/OceanBerlinghieri/oberlinghieri.github.io#readme",
+  "devDependencies": {
+    "htmlhint": "^1.7.1",
+    "prettier": "^3.6.2",
+    "stylelint": "^16.26.0"
+  }
+}
