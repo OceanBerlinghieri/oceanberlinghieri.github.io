@@ -4,11 +4,11 @@ This project implements a static blog hosted on GitHub Pages, using Jekyll as th
 
 ## Technical Stack
 
-- **HTML and CSS**: For the website template and visual styling.  
-- **Markdown**: Main format for writing blog posts.  
-- **Jekyll**: Static site generator compatible with GitHub Pages.  
-- **GitHub Pages**: Free hosting for the website.  
-- **Netlify CMS (Decap CMS)**: Administration panel for publishing content without editing HTML code.  
+- **HTML and CSS**: For the website template and visual styling.
+- **Markdown**: Main format for writing blog posts.
+- **Jekyll**: Static site generator compatible with GitHub Pages.
+- **GitHub Pages**: Free hosting for the website.
+- **Netlify CMS (Decap CMS)**: Administration panel for publishing content without editing HTML code.
 - **OAuth / GitHub OAuth**: Authentication method for secure login.
 
 ## Integration of Linters with npm
