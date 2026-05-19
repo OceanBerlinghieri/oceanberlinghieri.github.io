@@ -1,12 +1,116 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Oberlinghieri</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="init" />
-  </head>
-  <body></body>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Oberlinghieri</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/stylesheet.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div class="oberlinghieri-top">
+    <div class="oberlinghieri-bar oberlinghieri-2b2b2b oberlinghieri-card">
+      <a class="oberlinghieri-bar-item oberlinghieri-button oberlinghieri-padding-large oberlinghieri-hide-medium oberlinghieri-hide-large oberlinghieri-right"
+        href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="#" class="oberlinghieri-bar-item oberlinghieri-button oberlinghieri-padding-large">HOME</a>
+      <a href="#about"
+        class="oberlinghieri-bar-item oberlinghieri-button oberlinghieri-padding-large oberlinghieri-hide-small">ABOUT</a>
+      <a href="#contact"
+        class="oberlinghieri-bar-item oberlinghieri-button oberlinghieri-padding-large oberlinghieri-hide-small">CONTACT</a>
+      <!--<div class="oberlinghieri-dropdown-hover oberlinghieri-hide-small">
+        <button class="oberlinghieri-padding-large oberlinghieri-button" title="More">MORE <i
+            class="fa fa-caret-down"></i></button>
+        <div class="oberlinghieri-dropdown-content oberlinghieri-bar-block oberlinghieri-card-4">
+          <a href="#" class="oberlinghieri-bar-item oberlinghieri-button">Blog</a>
+          <a href="#" class="oberlinghieri-bar-item oberlinghieri-button">Art</a>
+          <a href="#" class="oberlinghieri-bar-item oberlinghieri-button">Media</a>
+        </div> -->
+      </div>
+      <a href="javascript:void(0)"
+        class="oberlinghieri-padding-large oberlinghieri-hover-red oberlinghieri-hide-small oberlinghieri-right"><i
+          class="fa fa-search"></i></a>
+    </div>
+  </div>
+
+  <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+  <div id="navDemo"
+    class="oberlinghieri-bar-block oberlinghieri-black oberlinghieri-hide oberlinghieri-hide-large oberlinghieri-hide-medium oberlinghieri-top"
+    style="margin-top:46px">
+    <a href="#about" class="oberlinghieri-bar-item oberlinghieri-button oberlinghieri-padding-large"
+      onclick="myFunction()">ABOUT</a>
+    <a href="#contact" class="oberlinghieri-bar-item oberlinghieri-button oberlinghieri-padding-large"
+      onclick="myFunction()">CONTACT</a>
+  </div>
+
+  <!-- Page content -->
+  <div class="oberlinghieri-content" style="max-width:2000px;margin-top:46px">
+
+    <!-- Automatic Slideshow Images -->
+    <div class="mySlides oberlinghieri-display-container oberlinghieri-center">
+      <img src="images/logo.png" style="width:100%">
+      <div class="oberlinghieri-display-bottommiddle oberlinghieri-container oberlinghieri-text-white oberlinghieri-padding-32 oberlinghieri-hide-small">
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="oberlinghieri-container oberlinghieri-content oberlinghieri-center oberlinghieri-padding-64" style="max-width:800px" id="band">
+      <h2 class="oberlinghieri-wide">ABOUT</h2>
+      <p class="oberlinghieri-opacity"><i>I love computers. (Most of the time.)</i></p>
+      <p class="oberlinghieri-justify">I'm a Data Engineer with a thing for understanding how systems work — and then making them work better. My professional focus is on real-time and batch data pipelines, using tools like Kafka, Spark, and Databricks on top of cloud infrastructure managed with Kubernetes and Terraform.
+        Outside of work, I run Linux, self-host things I definitely didn't need to self-host, and solve problems nobody asked me to solve. Mostly because I got curious.</p>
+      <div class="oberlinghieri-row oberlinghieri-padding-32">
+        <p class="oberlinghieri-opacity"><i>I build things. (Some of them even work.)</i></p>
+
+        <div class="oberlinghieri-third">
+          <p>Ontometal</p>
+          <a href="https://github.com/OceanBerlinghieri/ontometal"><img src="images/ontometal.png" class="oberlinghieri-round" alt="Ontometal" style="width:60%"
+          ></a>
+        </div>
+        <div class="oberlinghieri-third">
+          <p>AtomOS (perpetually unfinished)</p>
+          <a href="https://github.com/OceanBerlinghieri/AtomOS"><img src="images/AtomOS.png" class="oberlinghieri-round" alt="Ontometal" style="width:25%"
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- The Contact Section -->
+    <div class="oberlinghieri-container oberlinghieri-content oberlinghieri-padding-16" style="max-width:800px" id="contact">
+      <h2 class="oberlinghieri-wide oberlinghieri-center">CONTACT</h2>
+      <p class="oberlinghieri-opacity oberlinghieri-center"><i>Get in touch!</i></p>
+      <div class="oberlinghieri-row oberlinghieri-padding-32">
+        <div class="oberlinghieri-col m6 oberlinghieri-large oberlinghieri-margin-bottom">
+          <i class="fa fa-map-marker" style="width:30px"></i> Spain <br>
+          <i class="fa fa-envelope" style="width:30px"> </i> Email: berlinghieri10@gmail.com<br>
+        </div>
+        <div class="oberlinghieri-col m6">
+          <form action="mailto:berlinghieri10@gmail.com" method="POST" enctype="text/plain" target="_blank">
+            <div class="oberlinghieri-row-padding" style="margin:0 -16px 8px -16px">
+              <div class="oberlinghieri-half">
+                <input class="oberlinghieri-input oberlinghieri-border" type="text" placeholder="Name" required name="Name">
+              </div>
+              <div class="oberlinghieri-half">
+                <input class="oberlinghieri-input oberlinghieri-border" type="text" placeholder="Email" required name="Email">
+              </div>
+            </div>
+            <input class="oberlinghieri-input oberlinghieri-border" type="text" placeholder="Message" required name="Message">
+            <button class="oberlinghieri-button oberlinghieri-black oberlinghieri-section oberlinghieri-right" type="submit">SEND</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- End Page Content -->
+  </div>
+
+  <!-- Footer -->
+  <footer class="oberlinghieri-container oberlinghieri-padding-64 oberlinghieri-center oberlinghieri-opacity oberlinghieri-light-grey oberlinghieri-xlarge">
+    <i class="fa fa-linkedin oberlinghieri-hover-opacity"></i>
+  </footer>
+</body>
+
 </html>

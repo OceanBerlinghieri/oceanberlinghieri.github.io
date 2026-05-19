@@ -40,3 +40,7 @@ Thumbs.db
 # Tests
 .jest/
 *.tsbuildinfo
+
+# Json
+package-lock.json
+package.json

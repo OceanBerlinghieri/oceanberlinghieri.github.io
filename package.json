@@ -23,5 +23,7 @@
     "htmlhint": "^1.7.1",
     "prettier": "^3.6.2",
     "stylelint": "^16.26.0"
-  }
+  },
+  "main": "index.js",
+  "type": "commonjs"
 }
