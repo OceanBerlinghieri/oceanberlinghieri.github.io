@@ -82,9 +82,18 @@ npm run format
 - Prettier directly modifies the files, adjusting the style according to the configuration.
 - It can be integrated with editors (such as VSCode) for automatic formatting on save.
 
+## Jekyll Requirements & Setup
+
+- Ruby (includes RubyGems)
+- Install Jekyll and Bundler: `gem install jekyll bundler`
+- Install dependencies: `bundle install`
+- Create a new site: `jekyll new my-site`
+- Serve locally: `bundle exec jekyll serve`
+
 ## Useful resources
 
 - [Official GitHub Pages Guide](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
 - [Jekyll and Netlify CMS Tutorial](https://dev.to/mrkaushal/jekyll-with-netlify-cms-tutorial-54ii)
 - [Netlify CMS Configuration and Security](https://github.com/decaporg/jekyll-decap-cms)
 - [Example of integration with GitHub OAuth](https://github.com/vencax/netlify-cms-github-oauth-provider)
+- [Jekyll in Github Pages](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll)
