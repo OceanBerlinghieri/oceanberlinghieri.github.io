@@ -1,4 +1,4 @@
-name: Release
+name: release
 
 permissions:
   contents: write
@@ -21,14 +21,11 @@ jobs:
           app-id: ${{ secrets.APP_ID }}
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
 
-
-
-
-      - name: Checkout master
+      - name: Checkout main
         uses: actions/checkout@v4
         with:
           token: ${{ steps.app-token.outputs.token }}
-          ref: master
+          ref: main
           fetch-depth: 0
 
       - name: Configure git with bot creds
@@ -39,7 +36,7 @@ jobs:
       - name: Fetch develop
         run: git fetch origin develop
 
-      - name: Merge develop into master without history
+      - name: Merge develop into main without history
         run: |
           git merge --squash -X theirs origin/develop
 
@@ -47,15 +44,15 @@ jobs:
         run: |
           sed -i -E 's/v[0-9]+\.[0-9]+(\.[0-9]+)?(-[A-Za-z]+)?/${{ github.event.inputs.version }}/' index.html
 
-      - name: Commit merge and version change
+      - name: Commit merge and tag release 
         run: |
           git add index.html
           if ! git diff --cached --quiet; then
-            git commit -m "Bump version to ${{ github.event.inputs.version }}"
-            git tag -a "${{ github.event.inputs.version }}" -m "Release ${{ github.event.inputs.version }}"
+            git commit -m "Bump v${{ github.event.inputs.version }}"
+            git tag -a "v${{ github.event.inputs.version }}" -m "Release ${{ github.event.inputs.version }}"
           else
             echo "No changes to commit"
           fi
 
-      - name: Push master
-        run: git push origin master --tags
+      - name: Push main and tags
+        run: git push origin main --tags
