@@ -37,26 +37,7 @@ jobs:
 
       - name: Update version in index.html
         run: |
-          python3 - <<'PY'
-          import re
-          from pathlib import Path
-
-          path = Path("index.html")
-          text = path.read_text(encoding="utf-8")
-          version = "${{ github.event.inputs.version }}"
-
-          new_text = re.sub(
-              r'(?P<prefix>version\s*[:=]\s*)(?P<quote>["\']?)(?P<value>.*?)(?P=quote)',
-              lambda m: f'{m.group("prefix")}{m.group("quote")}{version}{m.group("quote")}',
-              text,
-              flags=re.IGNORECASE,
-          )
-
-          if new_text == text:
-              raise SystemExit("Version string not found in index.html")
-
-          path.write_text(new_text, encoding="utf-8")
-          PY
+          sed -i -E 's/v[0-9]+\.[0-9]+(\.[0-9]+)?(-[A-Za-z]+)?/${{ github.event.inputs.version }}/' index.html
 
       - name: Commit merge and version change
         run: |
