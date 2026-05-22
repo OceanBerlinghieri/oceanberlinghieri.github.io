@@ -14,12 +14,17 @@
   vertical-align: middle;   
 }
 
+// Basic design
 body {
   background-color: #2b2b2b;
   color: #fff;
 }
 
-a { color: #79b8ff; }
+a { color: #fff; }
+a:hover {
+  color: #0cc0df;
+  text-decoration: underline;
+}
 
 .site-header, .site-footer {
   background-color: #2b2b2b;
@@ -34,4 +39,29 @@ pre, code {
   background-color: #111;
   border-color: #111;
   color: #fff;
+}
+
+// Classes
+@media (max-width: 768px) {
+  .posts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.post-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.post-card h2 {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
 }
