@@ -48,8 +48,8 @@ jobs:
         run: |
           git add index.html
           if ! git diff --cached --quiet; then
-            git commit -m "Bump v${{ github.event.inputs.version }}"
-            git tag -a "v${{ github.event.inputs.version }}" -m "Release ${{ github.event.inputs.version }}"
+            git commit -m "Bump ${{ github.event.inputs.version }}"
+            git tag -a "${{ github.event.inputs.version }}" -m "Release ${{ github.event.inputs.version }}"
           else
             echo "No changes to commit"
           fi
