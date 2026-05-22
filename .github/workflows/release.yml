@@ -21,12 +21,20 @@ jobs:
           app-id: ${{ secrets.APP_ID }}
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
 
+
+
+
       - name: Checkout master
         uses: actions/checkout@v4
         with:
           token: ${{ steps.app-token.outputs.token }}
           ref: master
           fetch-depth: 0
+
+      - name: Configure git with bot creds
+        run: |
+          git config user.name "oberlinghieri-release-bot"
+          git config user.email "oberlinghieri-release-bot@users.noreply.github.com"
 
       - name: Fetch develop
         run: git fetch origin develop
