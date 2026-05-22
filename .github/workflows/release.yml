@@ -46,12 +46,13 @@ jobs:
 
       - name: Commit merge and tag release 
         run: |
-          git add index.html
+          git add -A
           if ! git diff --cached --quiet; then
             git commit -m "Bump ${{ github.event.inputs.version }}"
             git tag -a "${{ github.event.inputs.version }}" -m "Release ${{ github.event.inputs.version }}"
           else
-            echo "No changes to commit"
+            echo "No changes to commit — develop may already be in sync with main"
+            exit 1
           fi
 
       - name: Push main and tags
