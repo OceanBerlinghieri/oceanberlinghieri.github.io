@@ -3,7 +3,7 @@ display_url: https://OceanBerlinghieri.github.io/oceanberlinghieri.github.io
 
 # npm install decap-server --save-dev
 # npx decap-server
-local_backend: true
+# local_backend: true
 backend:
   name: github
   repo: OceanBerlinghieri/oceanberlinghieri.github.io
