@@ -1,0 +1,72 @@
+name: Release
+
+permissions:
+  contents: write
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Version to set (e.g. "v1.2.3")
+        required: true
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate GitHub App Token
+        id: app-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          token: ${{ steps.app-token.outputs.token }}
+          ref: main
+          fetch-depth: 0
+
+      - name: Fetch develop
+        run: git fetch origin develop
+
+      - name: Merge develop into master without history
+        run: |
+          git merge --squash -X theirs origin/develop
+
+      - name: Update version in index.html
+        run: |
+          python3 - <<'PY'
+          import re
+          from pathlib import Path
+
+          path = Path("index.html")
+          text = path.read_text(encoding="utf-8")
+          version = "${{ github.event.inputs.version }}"
+
+          new_text = re.sub(
+              r'(?P<prefix>version\s*[:=]\s*)(?P<quote>["\']?)(?P<value>.*?)(?P=quote)',
+              lambda m: f'{m.group("prefix")}{m.group("quote")}{version}{m.group("quote")}',
+              text,
+              flags=re.IGNORECASE,
+          )
+
+          if new_text == text:
+              raise SystemExit("Version string not found in index.html")
+
+          path.write_text(new_text, encoding="utf-8")
+          PY
+
+      - name: Commit merge and version change
+        run: |
+          git add index.html
+          if ! git diff --cached --quiet; then
+            git commit -m "Bump version to ${{ github.event.inputs.version }}"
+            git tag -a "${{ github.event.inputs.version }}" -m "Release ${{ github.event.inputs.version }}"
+          else
+            echo "No changes to commit"
+          fi
+
+      - name: Push main
+        run: git push origin main --tags
