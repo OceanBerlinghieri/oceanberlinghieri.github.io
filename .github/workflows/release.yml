@@ -1,0 +1,58 @@
+name: release
+
+permissions:
+  contents: write
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Version to set (e.g. "v1.2.3")
+        required: true
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate GitHub App Token
+        id: app-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          token: ${{ steps.app-token.outputs.token }}
+          ref: main
+          fetch-depth: 0
+
+      - name: Configure git with bot creds
+        run: |
+          git config user.name "oberlinghieri-release-bot"
+          git config user.email "oberlinghieri-release-bot@users.noreply.github.com"
+
+      - name: Fetch develop
+        run: git fetch origin develop
+
+      - name: Merge develop into main without history
+        run: |
+          git merge --squash -X theirs origin/develop
+
+      - name: Update version in index.html
+        run: |
+          sed -i -E 's/v[0-9]+\.[0-9]+(\.[0-9]+)?(-[A-Za-z]+)?/${{ github.event.inputs.version }}/' index.html
+
+      - name: Commit merge and tag release 
+        run: |
+          git add index.html
+          if ! git diff --cached --quiet; then
+            git commit -m "Bump v${{ github.event.inputs.version }}"
+            git tag -a "v${{ github.event.inputs.version }}" -m "Release ${{ github.event.inputs.version }}"
+          else
+            echo "No changes to commit"
+          fi
+
+      - name: Push main and tags
+        run: git push origin main --tags
