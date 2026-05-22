@@ -38,7 +38,7 @@ jobs:
 
       - name: Merge develop into main without history
         run: |
-          git merge --squash -X theirs origin/develop
+          git merge --squash -X theirs origin/develop --allow-unrelated-histories
 
       - name: Update version in index.html
         run: |
