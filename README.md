@@ -90,10 +90,8 @@ npm run format
 - Create a new site: `jekyll new my-site`
 - Serve locally: `bundle exec jekyll serve`
 
-## Useful resources
+## Netlify integration
+This project uses Decap CMS to manage content through a Git-based workflow. The CMS is configured so edits in the admin UI are committed to the repository, enabling automatic publishing via GitHub Pages or another deploy platform. Decap CMS works with the Jekyll content structure and the site build is triggered when content changes are pushed.
 
-- [Official GitHub Pages Guide](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
-- [Jekyll and Netlify CMS Tutorial](https://dev.to/mrkaushal/jekyll-with-netlify-cms-tutorial-54ii)
-- [Netlify CMS Configuration and Security](https://github.com/decaporg/jekyll-decap-cms)
-- [Example of integration with GitHub OAuth](https://github.com/vencax/netlify-cms-github-oauth-provider)
-- [Jekyll in Github Pages](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll)
+## OAuth
+Authentication for the CMS is handled via a simple JavaScript OAuth server hosted on Vercel. The OAuth flow is implemented in a lightweight API app at https://github.com/OceanBerlinghieri/decap-oauth-server, and the Vercel deployment provides secure GitHub OAuth login for Netlify CMS access. This separates authentication from the static site and keeps the CMS workflow secure, easy to maintain and decoupled from Netlify identity.

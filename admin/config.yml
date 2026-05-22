@@ -1,5 +1,4 @@
-site_url: https://OceanBerlinghieri.github.io/oceanberlinghieri.github.io
-display_url: https://OceanBerlinghieri.github.io/oceanberlinghieri.github.io
+site_url: https://oceanberlinghieri.github.io
 
 # npm install decap-server --save-dev
 # npx decap-server
@@ -7,7 +6,10 @@ display_url: https://OceanBerlinghieri.github.io/oceanberlinghieri.github.io
 backend:
   name: github
   repo: OceanBerlinghieri/oceanberlinghieri.github.io
-  branch: main
+  branch: fix/oauth_base_url
+
+  base_url: https://decap-oauth-server-eta.vercel.app
+  auth_endpoint: api/auth
 
 media_folder: "assets/images/posts"
 public_folder: "/assets/images/posts"
