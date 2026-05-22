@@ -21,11 +21,11 @@ jobs:
           app-id: ${{ secrets.APP_ID }}
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
 
-      - name: Checkout main
+      - name: Checkout master
         uses: actions/checkout@v4
         with:
           token: ${{ steps.app-token.outputs.token }}
-          ref: main
+          ref: master
           fetch-depth: 0
 
       - name: Fetch develop
@@ -68,5 +68,5 @@ jobs:
             echo "No changes to commit"
           fi
 
-      - name: Push main
-        run: git push origin main --tags
+      - name: Push master
+        run: git push origin master --tags
