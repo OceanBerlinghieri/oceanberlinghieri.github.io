@@ -8,7 +8,7 @@ permalink: /blog/
 
 <div class="posts-grid">
 
-{% for post in site.posts limit 9%}
+{% for post in site.posts limit 9 %}
 <a href="{{ post.url }}">
 <article class="post-card">
 
