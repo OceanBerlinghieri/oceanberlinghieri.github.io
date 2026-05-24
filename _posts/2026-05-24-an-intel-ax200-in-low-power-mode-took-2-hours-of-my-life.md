@@ -34,7 +34,8 @@ Finally, I just restored the system from a previous snapshot and — boom! Probl
 
 Anyways, I am not suspending my laptop anymore.
 
-Some references:
+---
+**References:**
 
 [Reddit post](https://www.reddit.com/r/openSUSE/comments/thrptr/issues_with_intel_ax200_after_suspend/)
 
