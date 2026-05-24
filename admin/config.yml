@@ -6,7 +6,7 @@ site_url: https://oceanberlinghieri.github.io
 backend:
   name: github
   repo: OceanBerlinghieri/oceanberlinghieri.github.io
-  branch: fix/oauth_base_url
+  branch: main
 
   base_url: https://decap-oauth-server-eta.vercel.app
   auth_endpoint: api/auth
