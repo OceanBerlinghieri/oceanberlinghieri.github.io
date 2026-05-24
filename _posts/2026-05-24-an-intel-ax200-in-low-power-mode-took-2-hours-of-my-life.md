@@ -36,7 +36,7 @@ Anyways, I am not suspending my laptop anymore.
 
 Some references:
 
-[Reddit post] (https://www.reddit.com/r/openSUSE/comments/thrptr/issues_with_intel_ax200_after_suspend/)
+[Reddit post](https://www.reddit.com/r/openSUSE/comments/thrptr/issues_with_intel_ax200_after_suspend/)
 
 [Arch linux forum](https://bbs.archlinux.org/viewtopic.php?id=261205)
 
