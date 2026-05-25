@@ -19,7 +19,7 @@ Everything was great — quick, keyboard-driven, built with developers in mind. 
 
 First thing was basic: `ip link` — my WiFi card was nowhere to be found, only the RJ45 input was recognized. Was my device even recognized in the first place? Yes — `lspci` returned `Network controller: Intel Corporation Wi-Fi 6 AX200`, so it had to be a firmware problem. Needed to confirm, and confirmed it: error -110, firmware was not loading correctly.
 
-``` shell
+```shell
 > sudo dmesg | grep -i "iwl".
 	probe with driver iwlwifi failed with error -110
 ```
@@ -27,14 +27,16 @@ First thing was basic: `ip link` — my WiFi card was nowhere to be found, only 
 Could it be a Linux regression that broke the firmware? Checked by installing other kernels — no solution. Could it be fixed through a BIOS option to disable low power mode, as suggested in some AX200 threads? No such option on my laptop's BIOS. Could it be possible to do the same from the Linux bootloader instead? Didn't work either.
 
 Finally, I just restored the system from a previous snapshot and — boom! Problem solved. All it was: an AX200 stuck in a low power state that, somehow, a snapshot rollback managed to fix. Obviously I don't want this happening again, so I added these configs for `iwl` and system boot:
-- `pcie_aspm=off` → disables aggressive PCIe sleep states (common AX200 breakage source)
-- `power_save=0` → stops WiFi from entering low-power mode
-- `d0i3_disable=1` → prevents deep device sleep (very important for resume bugs)
-- `uapsd_disable=1` → avoids power-save QoS issues
+
+* `pcie_aspm=off` → disables aggressive PCIe sleep states (common AX200 breakage source)
+* `power_save=0` → stops WiFi from entering low-power mode
+* `d0i3_disable=1` → prevents deep device sleep (very important for resume bugs)
+* `uapsd_disable=1` → avoids power-save QoS issues
 
 Anyways, I am not suspending my laptop anymore.
 
----
+- - -
+
 **References:**
 
 [Reddit post](https://www.reddit.com/r/openSUSE/comments/thrptr/issues_with_intel_ax200_after_suspend/)
