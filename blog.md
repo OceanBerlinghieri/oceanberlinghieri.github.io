@@ -9,7 +9,8 @@ permalink: /blog/
 <div class="posts-grid">
 
 {% assign engineering_posts = site.posts | where_exp: "post", "post.categories contains 'engineering'" %}
-{% for post in engineering_posts limit 9 %}<a href="{{ post.url }}">
+{% for post in engineering_posts limit 9 %}
+<a href="{{ post.url }}">
 <article class="post-card">
 
     <img src="{{ post.cover }}" alt="{{ post.title }}">
@@ -23,16 +24,5 @@ permalink: /blog/
 {% endfor %}
 </div>
 
-<br>
-
-<h1>Post categories</h1>
-
-{% assign categories = site.posts | map: "categories" | uniq %}
-
-{% for category in categories %}
-<a href="/blog/{{ category }}/">
-    {{ category }}
-</a>
-{% endfor %}
 
 
