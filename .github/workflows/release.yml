@@ -38,7 +38,7 @@ jobs:
 
       - name: Merge develop into main preserving renames and deletions
         run: |
-          git merge origin/develop --no-edit
+          git merge --allow-unrelated-histories origin/develop --no-edit
 
       - name: Keep blog posts alive while propagating real deletions from develop
         run: |
