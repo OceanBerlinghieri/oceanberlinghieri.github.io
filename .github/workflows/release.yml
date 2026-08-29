@@ -40,10 +40,6 @@ jobs:
         run: |
           git merge --squash -X theirs origin/develop --allow-unrelated-histories
 
-      - name: Update version in index.html
-        run: |
-          sed -i -E 's/v[0-9]+\.[0-9]+(\.[0-9]+)?(-[A-Za-z]+)?/${{ github.event.inputs.version }}/' index.html
-
       - name: Commit merge and tag release 
         run: |
           git add -A
