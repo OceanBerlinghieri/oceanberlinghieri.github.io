@@ -36,15 +36,29 @@ jobs:
       - name: Fetch develop
         run: git fetch origin develop
 
-      - name: Merge develop into main without history
+      - name: Merge develop into main preserving renames and deletions
         run: |
-          git merge --squash -X theirs origin/develop --allow-unrelated-histories
+          git merge --allow-unrelated-histories origin/develop --no-edit
 
-      - name: Commit merge and tag release 
+      - name: Keep blog posts alive while propagating real deletions from develop
         run: |
+          deleted_posts=$(git diff --name-status --diff-filter=D -- _posts | awk '{print $2}' || true)
+          if [ -n "$deleted_posts" ]; then
+            echo "$deleted_posts" | while IFS= read -r path; do
+              if [ -n "$path" ]; then
+                echo "Restoring post that should remain on main: $path"
+                git checkout HEAD -- "$path"
+              fi
+            done
+          fi
           git add -A
+          echo "Final staged changes:"
+          git diff --cached --name-status
+
+      - name: Commit merge and tag release
+        run: |
           if ! git diff --cached --quiet; then
-            git commit -m "Bump ${{ github.event.inputs.version }}"
+            git commit --allow-empty -m "Bump ${{ github.event.inputs.version }}"
             git tag -a "${{ github.event.inputs.version }}" -m "Release ${{ github.event.inputs.version }}"
           else
             echo "No changes to commit — develop may already be in sync with main"
