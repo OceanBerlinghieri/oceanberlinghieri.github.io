@@ -8,8 +8,8 @@ permalink: /blog/
 
 <div class="posts-grid">
 
-{% for post in site.posts limit 9 %}
-<a href="{{ post.url }}">
+{% assign engineering_posts = site.posts | where_exp: "post", "post.categories contains 'engineering'" %}
+{% for post in engineering_posts limit 9 %}<a href="{{ post.url }}">
 <article class="post-card">
 
     <img src="{{ post.cover }}" alt="{{ post.title }}">
