@@ -5,7 +5,7 @@ title: An Intel AX200 in low power mode took 2 hours of my life
 cover: /assets/images/posts/an-intel-ax-in-low-power-mode-took-2-hours-of-my-life.png
 excerpt: AX200 enters in low power mode after suspend and does not return.
 date: 2026-05-25T08:34:55.367Z
-categories: linux
+categories: engineering
 tags:
   - omarchy
   - arch
