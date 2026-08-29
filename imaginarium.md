@@ -9,7 +9,7 @@ permalink: /imaginarium/
 <div class="posts-grid">
 
 {% assign imaginarium_posts = site.posts | where_exp: "post", "post.categories contains 'imaginarium'" %}
-{% for post in imaginarium_posts limit 9 %}
+{% for post in imaginarium_posts limit: 9 %}
 <a href="{{ post.url }}">
 <article class="post-card">
 
