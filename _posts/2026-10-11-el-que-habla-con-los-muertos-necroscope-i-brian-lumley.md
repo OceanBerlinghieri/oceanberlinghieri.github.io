@@ -20,11 +20,9 @@ tags: []
 | Valoración  | 4/5                                         |
 | Fecha       | 2026-10-11                                  |
 
-# ⚠️ Aviso importante
+**⚠️ Aviso importante. Este artículo contiene spoilers.**
 
-**Este artículo contiene spoilers.**
-
-# El vampiro como parásito, el nigromante humano y el amigo de losmuertos: Mi crítica de *El que habla con los muertos*
+# El vampiro como parásito, el nigromante humano y el amigo de los muertos: Mi crítica de *El que habla con los muertos*
 
 Hay libros de terror que intentan estilizar al monstruo, convertirlo en un aristócrata melancólico o en un objeto de deseo. ***El que habla con los muertos*** (*Necroscope*, 1986), de Brian Lumley, hace exactamente lo contrario: agarra el mito del vampiro, le quita todo el romanticismo gótico y lo convierte en una pesadilla simbiótica, brutal y alienígena.
 
@@ -73,6 +71,8 @@ Aprecio enormemente que la ambientación en la Guerra Fría y el espionaje psíq
 Reflexionando sobre la obra, me resulta verdaderamente sorprendente cómo una historia cargada de **habilidades parapsicológicas, organizaciones secretas, viajes cuánticos y vampiros parásitos** no haya sido explotada masivamente en la cultura popular actual. Con la fiebre contemporánea por las historias de superpoderes, antihéroes y agencias sobrenaturales (estilo *Stranger Things*), el universo de *Necroscope* parece una mina de oro audiovisual sin explotar.
 
  Parece ser una combinación de factores: por un lado, los sucesivos intentos de adaptación y los anuncios que no han llegado a materializarse evocan el famoso «infierno de desarrollo» de la industria cinematográfica. En 2021, Revelations Entertainment, la productora cofundada por Morgan Freeman, anunció su intención de desarrollar la franquicia en distintos formatos, aunque el proyecto no ha llegado a materializarse públicamente. Por otro lado, la extrema violencia visceral y el body horror de la saga exigirían encontrar el equilibrio adecuado entre fidelidad al material original y viabilidad comercial. Es una lástima, porque la premisa tiene hoy en día más vigencia que nunca.
+
+---
 
 ## Veredicto Final: 4 / 5 🌟
 
