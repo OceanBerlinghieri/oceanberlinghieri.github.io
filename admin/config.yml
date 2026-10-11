@@ -29,6 +29,6 @@ collections:
       - { label: "Excerpt", name: "excerpt", widget: "text" }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Category', name: 'categories', widget: 'select', 
-          options: ['engineering', 'imaginarium'] }
+          options: ['engineering', 'imaginarium', 'notas_al_margen'] }
       - { label: 'Tags', name: 'tags', widget: 'list' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
