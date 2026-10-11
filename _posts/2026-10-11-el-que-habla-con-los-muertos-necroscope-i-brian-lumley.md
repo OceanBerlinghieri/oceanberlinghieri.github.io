@@ -12,17 +12,15 @@ tags: []
 
 ![El que habla con los muertos (Necroscope I) ](/assets/images/posts/necroscope-i.jpg "El que habla con los muertos (Necroscope I)")
 
-||
-| ----------- | ------------------------------------------- |
-| Libro       | El que habla con los muertos (Necroscope I) |
-| Publicación | 1986                                        |
-| Autor       | Brian Lumley                                |
-| Género      | Dark Fantasy / Terror / Espionaje Psíquico  |
-| Páginas     | \~416 páginas                               |
-| Valoración  | 4/5                                         |
-| Fecha       | 2026-10-11                                  |
-
-
+```
+Libro        El que habla con los muertos (Necroscope I)
+Publicación  1986
+Autor        Brian Lumley
+Género       Dark Fantasy / Terror / Espionaje Psíquico
+Páginas      ~416 páginas
+Valoración   4/5
+Fecha        2026-10-11
+```
 
 # El vampiro como parásito, el nigromante humano y el amigo de los muertos: Mi crítica de *El que habla con los muertos*
 
