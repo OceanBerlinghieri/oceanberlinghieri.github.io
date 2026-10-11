@@ -8,6 +8,8 @@ date: 2026-10-11T06:11:03.007Z
 categories: notas_al_margen
 tags: []
 ---
+**⚠️ Aviso importante. Este artículo contiene spoilers.**
+
 ![El que habla con los muertos (Necroscope I) ](/assets/images/posts/necroscope-i.jpg "El que habla con los muertos (Necroscope I)")
 
 ||
@@ -20,7 +22,7 @@ tags: []
 | Valoración  | 4/5                                         |
 | Fecha       | 2026-10-11                                  |
 
-**⚠️ Aviso importante. Este artículo contiene spoilers.**
+
 
 # El vampiro como parásito, el nigromante humano y el amigo de los muertos: Mi crítica de *El que habla con los muertos*
 
