@@ -1,7 +1,7 @@
 ---
 layout: post
 permalink: /blog/:categories/:title
-title: "Carmilla: la seducción aristocrática del vampiro"
+title: Carmilla
 cover: /assets/images/posts/00ae48f4597e9f169c06ca70d55bbc80.jpg
 excerpt: Una de las primeras grandes vampiresas de la cultura popular moderna.
 date: 2026-10-13T05:38:42.626Z
@@ -44,6 +44,10 @@ En épocas más recientes, el género se ha abierto a otros arquetipos: vampiros
 El misterio me ha parecido más morboso que intrigante. La identidad y la amenaza de Carmilla se ven venir, y el desenlace no depende de una trama especialmente enrevesada. Hoy estamos habituados a entramados más complejos, aunque tampoco creo que la novela pretenda competir con ellos: su fuerza está en la atmósfera y en la presencia de Carmilla, no en ocultar indefinidamente quién es.
 
 Aun así, sí me quedo con curiosidad por los misterios que rodean a la familia Karnstein: quién fue realmente la madre de Carmilla, quién era el hombre pálido y lánguido de la fiesta a la que asiste el general y qué ocurrió con el pueblo que habitaban para acabar en decadencia. La intriga central puede resultar evidente, pero esos detalles sugieren una historia familiar y un pasado más amplios que el relato apenas deja entrever y Le Fanu nunca llegó a explotar.
+
+## El germen de Drácula y Van Helsing
+
+Además de transmitir la sensación de pertenecer a un mundo mucho más amplio del que se nos narra, resulta fascinante cómo *Carmilla* parece dejar preparado el terreno para la llegada inevitable de *Drácula* y Van Helsing. Le Fanu no solo construye una figura vampírica que ya reúne muchos de los rasgos del mito moderno, sino que introduce, con el moravo de la Alta Estiria, el arquetipo del experto que conoce las tradiciones y sabe cómo enfrentarse a estas criaturas. Es inevitable pensar en el futuro **Van Helsing** y en cómo Bram Stoker desarrollaría estos elementos quince años después. Como si las piezas fundamentales estuvieran sobre la mesa y solo faltara que alguien terminase de encajarlas.
 
 ## Una prosa de otra época
 
