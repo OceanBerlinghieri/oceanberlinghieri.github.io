@@ -1,7 +1,7 @@
 ---
 layout: post
 permalink: /blog/:categories/:title
-title: Carmilla
+title: Carmilla - J. Sheridan Le Fanu
 cover: /assets/images/posts/00ae48f4597e9f169c06ca70d55bbc80.jpg
 excerpt: Una de las primeras grandes vampiresas de la cultura popular moderna.
 date: 2026-10-13T05:38:42.626Z
